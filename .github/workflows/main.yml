@@ -17,7 +17,7 @@ jobs:
     - name: Build
       uses: actions/setup-node@master
     - run: npm install --unsafe-perm
-    - run: npm run build
+    - run: npm run build --unsafe-perm
     - run: tar -zcvf release.tgz .nuxt static nuxt.config.js package.json package-lock.json pm2.config.json
 
     # 发布 Release
